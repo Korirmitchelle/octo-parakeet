@@ -20,8 +20,10 @@ class WeatherViewModel{
                 NetworkService.shared.setLatitude(location.latitude)
                 NetworkService.shared.setLongitude(location.longitude)
                 NetworkService.shared.getWeather(onSuccess: { (result) in
-                    print("weather result here \(result)")
-                    single(.success(result))
+                    var mutatingResult = result
+                    mutatingResult.sortDailyArray()
+                    mutatingResult.sortHourlyArray()
+                    single(.success(mutatingResult))
                 }) { (errorMessage) in
                     debugPrint(errorMessage)
                     single(.failure(ServerError(description: errorMessage)))

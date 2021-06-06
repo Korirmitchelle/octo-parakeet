@@ -10,6 +10,7 @@ target 'Parakeet' do
   pod 'GooglePlaces'
   pod 'R.swift'
   pod 'RxCocoa'
+  pod 'R.swift'
 
 
   target 'ParakeetTests' do

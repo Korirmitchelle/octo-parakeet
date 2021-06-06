@@ -24,6 +24,9 @@
 		F567BF73266D0C4400C56C0F /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF72266D0C4400C56C0F /* Locator.swift */; };
 		F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF7A266D0C6400C56C0F /* AppConstants.swift */; };
 		F567BFA7266D2E6C00C56C0F /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFA6266D2E6C00C56C0F /* ServerError.swift */; };
+		F567BFC1266D446000C56C0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F567BFC0266D446000C56C0F /* Localizable.strings */; };
+		F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */; };
+		F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFCD266D4B2400C56C0F /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		F567BF72266D0C4400C56C0F /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
 		F567BF7A266D0C6400C56C0F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F567BFA6266D2E6C00C56C0F /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		F567BFC0266D446000C56C0F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardClasses.swift; sourceTree = "<group>"; };
+		F567BFCD266D4B2400C56C0F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 		F567BF20266CB1DC00C56C0F /* Parakeet */ = {
 			isa = PBXGroup;
 			children = (
+				F567BFBF266D442900C56C0F /* Localization */,
 				F567BF8E266D0EFA00C56C0F /* Weather */,
 				F567BF8A266D0D4E00C56C0F /* Common */,
 				F567BF71266D0C3400C56C0F /* Locator */,
@@ -213,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				F567BF7A266D0C6400C56C0F /* AppConstants.swift */,
+				F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */,
+				F567BFCD266D4B2400C56C0F /* Colors.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -224,6 +233,14 @@
 				F567BF6C266D0BDE00C56C0F /* WeatherViewModel.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		F567BFBF266D442900C56C0F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F567BFC0266D446000C56C0F /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +256,7 @@
 				F567BF1C266CB1DC00C56C0F /* Resources */,
 				38B7AF76A1E6B04DBC918634 /* [CP] Copy Pods Resources */,
 				950AF2EE9B1C4812BD1B6800 /* [CP] Embed Pods Frameworks */,
+				F567BFB8266D43A800C56C0F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -337,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F567BF2E266CB1DE00C56C0F /* LaunchScreen.storyboard in Resources */,
+				F567BFC1266D446000C56C0F /* Localizable.strings in Resources */,
 				F567BF2B266CB1DE00C56C0F /* Assets.xcassets in Resources */,
 				F567BF29266CB1DC00C56C0F /* Main.storyboard in Resources */,
 			);
@@ -493,6 +512,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F567BFB8266D43A800C56C0F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -501,10 +539,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F567BF73266D0C4400C56C0F /* Locator.swift in Sources */,
+				F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */,
 				F567BF5F266CC0B200C56C0F /* Model.swift in Sources */,
 				F567BF6D266D0BDE00C56C0F /* WeatherViewModel.swift in Sources */,
 				F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */,
 				F567BF26266CB1DC00C56C0F /* WeatherViewController.swift in Sources */,
+				F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */,
 				F567BF22266CB1DC00C56C0F /* AppDelegate.swift in Sources */,
 				F567BF59266CC05700C56C0F /* NetworkService.swift in Sources */,
 				F567BF24266CB1DC00C56C0F /* SceneDelegate.swift in Sources */,
