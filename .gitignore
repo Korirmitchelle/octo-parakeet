@@ -1,0 +1,19 @@
+*.ipa
+*.dSYM.zip
+*.dSYM
+.build/
+
+
+## Desktop Services Store
+.DS_Store
+
+
+## User settings
+xcuserdata/
+
+*.xcscheme
+*.xcbkptlist
+*.xcuserstate
+*.xcworkspacedata
+
+xcschememanagement.plist
