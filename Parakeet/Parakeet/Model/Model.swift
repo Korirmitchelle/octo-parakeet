@@ -101,7 +101,7 @@ enum WeatherType:String{
     case rainy = "Rain"
     case clouds = "Clouds"
     
-    var background: UIImage? {
+    var backgroundImage: UIImage? {
         switch self {
         case .sunny: return R.image.sunny()
         case .rainy: return R.image.rainy()
@@ -120,6 +120,13 @@ enum WeatherType:String{
         case .sunny: return .sunny
         case .rainy: return .rainy
         case .clouds: return .cloudy
+        }
+    }
+    var icon:UIImage?{
+        switch self {
+        case .sunny: return R.image.day_sunny()
+        case .rainy:return R.image.day_rainy()
+        case .clouds:return R.image.day_cloudy()
         }
     }
 }

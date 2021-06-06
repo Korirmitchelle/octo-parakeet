@@ -28,6 +28,7 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         showLoadingView()
         getWeather()
+        setupTableview()
     }
     
     func setupTableview(){
@@ -66,24 +67,46 @@ class WeatherViewController: UIViewController {
     
     func showViews(result:Result){
         hideLoadingView()
+        self.results = result
+        weatherTableView.reloadData()
         let dayTemp = result.daily[0].temp.day
         self.temperatureLabel.text = "\(dayTemp)"
-        self.weatherLabel.text = result.current.weather[0].description.uppercased()
+        let mainDescription = result.current.weather[0].main
         self.minimumLabel.text = String(result.daily[0].temp.min)
         self.currentLabel.text = String(dayTemp)
         self.maximumLabel.text = String(result.daily[0].temp.max)
-        
+        let type = WeatherType(rawValue: mainDescription) ?? .clouds
+        self.changeColors(type: type)
+    }
+    
+    func changeColors(type:WeatherType){
+        self.weatherLabel.text = type.title?.uppercased()
+        self.imageview.image = type.backgroundImage
+        self.weatherTableView.backgroundColor = type.color
+        self.weatherDetailsView.backgroundColor = type.color
     }
 }
 
 extension WeatherViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return results?.daily.count ?? 7
+        if let dailyResults = results?.daily{
+            return dailyResults.count - 1
+        }
+        else{
+            return 6
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "daycell", for: indexPath) as? WeatherTableViewCell else {return UITableViewCell()}
-        let type = results?.daily[indexPath.row].weather[0].main
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "daycell", for: indexPath) as? WeatherTableViewCell else {
+            return UITableViewCell()}
+        if let main = results?.daily[indexPath.row + 1].weather[0].main {
+            let type = WeatherType(rawValue:main)
+            cell.dayImageview.image = type?.icon
+        }
+        if let temperature = results?.daily[indexPath.row + 1].temp.day{
+            cell.temperatureLabel.text = String(temperature)
+        }
         return cell
     }
 }

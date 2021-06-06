@@ -29,6 +29,7 @@
 		F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFCD266D4B2400C56C0F /* Colors.swift */; };
 		F567BFE0266D4F8E00C56C0F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFDF266D4F8E00C56C0F /* R.generated.swift */; };
 		F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */; };
+		F567BFED266D638F00C56C0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFEC266D638F00C56C0F /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F567BFCD266D4B2400C56C0F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F567BFDF266D4F8E00C56C0F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		F567BFEC266D638F00C56C0F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				F567BF7A266D0C6400C56C0F /* AppConstants.swift */,
 				F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */,
 				F567BFCD266D4B2400C56C0F /* Colors.swift */,
+				F567BFEC266D638F00C56C0F /* Date.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */,
 				F567BF22266CB1DC00C56C0F /* AppDelegate.swift in Sources */,
 				F567BF59266CC05700C56C0F /* NetworkService.swift in Sources */,
+				F567BFED266D638F00C56C0F /* Date.swift in Sources */,
 				F567BF24266CB1DC00C56C0F /* SceneDelegate.swift in Sources */,
 				F567BFA7266D2E6C00C56C0F /* ServerError.swift in Sources */,
 				F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */,
