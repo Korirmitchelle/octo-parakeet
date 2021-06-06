@@ -1,0 +1,17 @@
+
+*.ipa
+
+## Desktop Services Store
+.DS_Store
+
+## User settings
+xcuserdata/
+
+UserInterfaceState\.xcuserstate
+
+Pods/
+
+
+R.generated.swift
+
+
