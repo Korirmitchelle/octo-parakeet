@@ -7,7 +7,7 @@
 
 import UIKit
 import RxSwift
-
+import Rswift
 
 class WeatherViewController: UIViewController {
     @IBOutlet weak var weatherDetailsView: UIView!
@@ -18,13 +18,24 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var maximumLabel: UILabel!
+    @IBOutlet weak var weatherTableView: UITableView!
     
+    var results:Result?
     let viewModel = WeatherViewModel()
     private let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showLoadingView()
+        getWeather()
+    }
+    
+    func setupTableview(){
+        weatherTableView.separatorStyle = .none
+        weatherTableView.dataSource = self
+    }
+    
+    func getWeather(){
         self.viewModel.getWeather().subscribe(onSuccess: { [weak self] result in
             DispatchQueue.main.async {
                 guard let self = self else { return }
@@ -34,11 +45,10 @@ class WeatherViewController: UIViewController {
         }, onFailure: { (error) in
             if let serverError = error as? ServerError {
                 DispatchQueue.main.async {
-//                    self.showAlert(title: "", message: serverError.description)
+                    //                    self.showAlert(title: "", message: serverError.description)
                 }
             }
         }).disposed(by: disposeBag)
-        // Do any additional setup after loading the view.
     }
     
     func hideLoadingView(){
@@ -52,7 +62,7 @@ class WeatherViewController: UIViewController {
         imageview.isHidden = true
         weatherDetailsView.isHidden = true
     }
-
+    
     
     func showViews(result:Result){
         hideLoadingView()
@@ -62,9 +72,18 @@ class WeatherViewController: UIViewController {
         self.minimumLabel.text = String(result.daily[0].temp.min)
         self.currentLabel.text = String(dayTemp)
         self.maximumLabel.text = String(result.daily[0].temp.max)
-
+        
     }
-
-
 }
 
+extension WeatherViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results?.daily.count ?? 7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "daycell", for: indexPath) as? WeatherTableViewCell else {return UITableViewCell()}
+        let type = results?.daily[indexPath.row].weather[0].main
+        return cell
+    }
+}

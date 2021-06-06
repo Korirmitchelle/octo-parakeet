@@ -4,7 +4,7 @@
 //
 //  Created by Mitchelle Korir on 06/06/2021.
 //
-
+import UIKit
 import Foundation
 
 struct Result: Codable {
@@ -94,4 +94,32 @@ struct Feels_Like: Codable {
     let night: Double
     let eve: Double
     let morn: Double
+}
+
+enum WeatherType:String{
+    case sunny = "Sun"
+    case rainy = "Rain"
+    case clouds = "Clouds"
+    
+    var background: UIImage? {
+        switch self {
+        case .sunny: return R.image.sunny()
+        case .rainy: return R.image.rainy()
+        case .clouds: return R.image.cloudy()
+        }
+    }
+    var title: String? {
+        switch self {
+        case .sunny: return R.string.localizable.weatherSunny()
+        case .rainy: return R.string.localizable.weatherRainy()
+        case .clouds : return R.string.localizable.weatherCloudy()
+        }
+    }
+    var color: UIColor? {
+        switch self {
+        case .sunny: return .sunny
+        case .rainy: return .rainy
+        case .clouds: return .cloudy
+        }
+    }
 }

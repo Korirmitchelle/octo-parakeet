@@ -15,3 +15,6 @@
 "weather.friday" = "Friday";
 "weather.saturday" = "Saturday";
 "weather.sunday" = "Sunday";
+"weather.cloudy" = "cloudy";
+"weather.rainy" = "rainy";
+"weather.sunny" = "sunny";

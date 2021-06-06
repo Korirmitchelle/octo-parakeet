@@ -115,30 +115,30 @@
                                         <rect key="frame" x="20" y="86" width="374" height="325"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LbL-mq-JmE">
-                                                <rect key="frame" x="0.0" y="28" width="374" height="176.5"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="daycell" id="LbL-mq-JmE" customClass="WeatherTableViewCell" customModule="Parakeet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="178"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LbL-mq-JmE" id="GXP-Uv-16K">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="176.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="178"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="GIk-yD-K4u">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="176.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="178"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmQ-L3-gxv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="176.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="178"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6u9-pW-rOC">
-                                                                    <rect key="frame" x="177" y="0.0" width="20" height="176.5"/>
+                                                                    <rect key="frame" x="177" y="0.0" width="20" height="178"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="B9I-o3-PQa"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gja-Mu-uOt">
-                                                                    <rect key="frame" x="332.5" y="0.0" width="41.5" height="176.5"/>
+                                                                    <rect key="frame" x="332.5" y="0.0" width="41.5" height="178"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -156,6 +156,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="GIk-yD-K4u" secondAttribute="bottom" id="ha8-i9-eKt"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="dayImageview" destination="6u9-pW-rOC" id="p1T-K5-k15"/>
+                                                    <outlet property="dayLabel" destination="dmQ-L3-gxv" id="PVH-JK-2G0"/>
+                                                    <outlet property="temperatureLabel" destination="gja-Mu-uOt" id="nLU-8m-eH8"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -228,6 +233,7 @@
                         <outlet property="temperatureLabel" destination="09V-8h-aM8" id="mIk-Fq-Ub1"/>
                         <outlet property="weatherDetailsView" destination="QaM-sW-JBw" id="KZN-gf-ZfV"/>
                         <outlet property="weatherLabel" destination="Ief-3T-9tV" id="uKJ-Np-WpB"/>
+                        <outlet property="weatherTableView" destination="3jc-gw-jpR" id="wmX-jg-uGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
