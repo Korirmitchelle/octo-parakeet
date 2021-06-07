@@ -60,6 +60,7 @@ class LocationsViewController: UIViewController {
     
     
     @objc func fetchLocations(){
+        self.toggleSwitch.isOn = false
         self.viewModel.fetchSavedLocations().subscribe { [weak self] event in
             guard let `self` = self else { return }
             print("coun \(self.viewModel.locations.value.count)")
