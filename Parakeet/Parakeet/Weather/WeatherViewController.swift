@@ -30,7 +30,6 @@ class WeatherViewController: UIViewController {
         getWeather()
         setupTableview()
         viewModel.getWeekdays()
-        
     }
     
     func setupTableview(){

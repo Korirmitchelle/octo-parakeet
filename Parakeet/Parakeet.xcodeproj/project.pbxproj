@@ -30,6 +30,9 @@
 		F567BFE0266D4F8E00C56C0F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFDF266D4F8E00C56C0F /* R.generated.swift */; };
 		F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */; };
 		F567BFED266D638F00C56C0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFEC266D638F00C56C0F /* Date.swift */; };
+		F567C00B266E0DE300C56C0F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C00A266E0DE200C56C0F /* TabBarViewController.swift */; };
+		F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C013266E128200C56C0F /* LocationsViewController.swift */; };
+		F567C020266E18F800C56C0F /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C01F266E18F800C56C0F /* AddLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		F567BFDF266D4F8E00C56C0F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		F567BFEC266D638F00C56C0F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F567C00A266E0DE200C56C0F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F567C013266E128200C56C0F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		F567C01F266E18F800C56C0F /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,9 @@
 		F567BF20266CB1DC00C56C0F /* Parakeet */ = {
 			isa = PBXGroup;
 			children = (
+				F567C01E266E162A00C56C0F /* AddNewLocation */,
+				F567C012266E126A00C56C0F /* AddedLocations */,
+				F567C009266E0DB700C56C0F /* TabBarController */,
 				F567BFDF266D4F8E00C56C0F /* R.generated.swift */,
 				F567BFBF266D442900C56C0F /* Localization */,
 				F567BF8E266D0EFA00C56C0F /* Weather */,
@@ -250,6 +259,30 @@
 				F567BFC0266D446000C56C0F /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		F567C009266E0DB700C56C0F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F567C00A266E0DE200C56C0F /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F567C012266E126A00C56C0F /* AddedLocations */ = {
+			isa = PBXGroup;
+			children = (
+				F567C013266E128200C56C0F /* LocationsViewController.swift */,
+			);
+			path = AddedLocations;
+			sourceTree = "<group>";
+		};
+		F567C01E266E162A00C56C0F /* AddNewLocation */ = {
+			isa = PBXGroup;
+			children = (
+				F567C01F266E18F800C56C0F /* AddLocationViewController.swift */,
+			);
+			path = AddNewLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +583,7 @@
 				F567BF73266D0C4400C56C0F /* Locator.swift in Sources */,
 				F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */,
 				F567BF5F266CC0B200C56C0F /* Model.swift in Sources */,
+				F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */,
 				F567BF6D266D0BDE00C56C0F /* WeatherViewModel.swift in Sources */,
 				F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */,
 				F567BF26266CB1DC00C56C0F /* WeatherViewController.swift in Sources */,
@@ -560,6 +594,8 @@
 				F567BF24266CB1DC00C56C0F /* SceneDelegate.swift in Sources */,
 				F567BFA7266D2E6C00C56C0F /* ServerError.swift in Sources */,
 				F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */,
+				F567C020266E18F800C56C0F /* AddLocationViewController.swift in Sources */,
+				F567C00B266E0DE300C56C0F /* TabBarViewController.swift in Sources */,
 				F567BFE0266D4F8E00C56C0F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

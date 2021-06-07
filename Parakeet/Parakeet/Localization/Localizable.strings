@@ -18,3 +18,4 @@
 "weather.cloudy" = "cloudy";
 "weather.rainy" = "rainy";
 "weather.sunny" = "sunny";
+"locatons.noLocations" = "No Added Locations";
