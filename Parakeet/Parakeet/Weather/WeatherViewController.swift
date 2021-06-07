@@ -8,11 +8,14 @@
 import UIKit
 import RxSwift
 import Rswift
+import GoogleMaps
 
 class WeatherViewController: UIViewController {
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var weatherDetailsView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageview: UIImageView!
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var minimumLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
@@ -23,35 +26,72 @@ class WeatherViewController: UIViewController {
     var results:Result?
     let viewModel = WeatherViewModel()
     private let disposeBag = DisposeBag()
+    var location:Location?
+    var city = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showLoadingView()
-        getWeather()
+        fetchForecast()
         setupTableview()
         viewModel.getWeekdays()
+        saveButton.isHidden = location == nil
+        saveButton.addTarget(self, action: #selector(saveLocation), for: .touchUpInside)
+    }
+    
+    
+    @objc func saveLocation(){
+        guard let location = location else {
+            return
+        }
+        self.viewModel.saveLocation(location: location).subscribe { [weak self] event in
+            guard let `self` = self else { return }
+            NotificationCenter.default.post(
+                name: NSNotification.Name(rawValue: "fetchlocations"),
+                object: nil)
+            self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+           
+        }.disposed(by: self.disposeBag)
     }
     
     func setupTableview(){
         weatherTableView.separatorStyle = .none
         weatherTableView.dataSource = self
+        
     }
     
-    func getWeather(){
-        self.viewModel.getWeather().subscribe(onSuccess: { [weak self] result in
+    func fetchForecast(){
+        guard let location = location else {
+            findMe()
+            return
+        }
+        getWeather(location: CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon))
+    }
+    
+    func findMe(){
+        self.viewModel.findMe().subscribe(onSuccess: { [weak self] result in
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 self.showViews(result: result)
-                
             }
         }, onFailure: { (error) in
-            if let serverError = error as? ServerError {
-                DispatchQueue.main.async {
-                    //                    self.showAlert(title: "", message: serverError.description)
-                }
-            }
+            
         }).disposed(by: disposeBag)
     }
+    
+    func getWeather(location:CLLocationCoordinate2D){
+        
+        self.viewModel.getWeather(location: location).subscribe(onSuccess: { [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.showViews(result: result)
+            }
+        }, onFailure: { (error) in
+            
+        }).disposed(by: disposeBag)
+    }
+    
     
     func hideLoadingView(){
         activityIndicator.isHidden = true
@@ -71,6 +111,7 @@ class WeatherViewController: UIViewController {
         self.results = result
         weatherTableView.reloadData()
         let dayTemp = result.daily[0].temp.day
+        self.locationLabel.text = city
         self.temperatureLabel.text = "\(dayTemp)"
         let mainDescription = result.current.weather[0].main
         self.minimumLabel.text = String(result.daily[0].temp.min)
@@ -112,7 +153,7 @@ extension WeatherViewController:UITableViewDataSource{
         if isIndexValid{
             cell.dayLabel.text = viewModel.daysOfWeek.value[indexPath.row]
         }
-
+        
         return cell
     }
 }

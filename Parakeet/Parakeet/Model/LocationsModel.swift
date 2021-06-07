@@ -30,8 +30,8 @@ struct Prediction: Codable {
 
 // MARK: - StructuredFormatting
 struct StructuredFormatting: Codable {
-    let mainText: String
-    let secondaryText: String
+    let mainText: String?
+    let secondaryText: String?
 
     enum CodingKeys: String, CodingKey {
         case mainText = "main_text"
@@ -41,7 +41,7 @@ struct StructuredFormatting: Codable {
 
 
 
-struct Location {
+struct Location : Encodable, Decodable {
     var name: String
     var detail: String
     var id: String

@@ -135,7 +135,7 @@ class NetworkService {
                 guard error == nil, let results = results else {
                     return
                 }
-                let location = Location(name: prediction.structuredFormatting.mainText, detail: prediction.structuredFormatting.secondaryText, id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
+                let location = Location(name: (prediction.structuredFormatting.mainText ?? results.name) ?? "", detail: (prediction.structuredFormatting.secondaryText ?? results.formattedAddress) ?? "", id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
                 locations.append(location)
             }
         }
@@ -165,7 +165,7 @@ class NetworkService {
                     single(.failure(error ?? ServerError(description: "Invalid response")))
                     return
                 }
-                let location = Location(name: prediction.structuredFormatting.mainText, detail: prediction.structuredFormatting.secondaryText, id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
+                let location = Location(name: (prediction.structuredFormatting.mainText ?? results.name) ?? "", detail: (prediction.structuredFormatting.secondaryText ?? results.formattedAddress) ?? "", id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
                 single(.success(location))
                 
             }
