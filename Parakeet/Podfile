@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Parakeet' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Parakeet
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'R.swift'
+  pod 'RxCocoa'
+  pod 'R.swift'
+
+
+  target 'ParakeetTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ParakeetUITests' do
+    # Pods for testing
+  end
+
+end

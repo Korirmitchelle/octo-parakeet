@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Parakeet
+
+  Created by Mitchelle Korir on 06/06/2021.
+  
+*/
+"weather.minimum" = "Min";
+"weather.current" = "Current";
+"weather.max" = "Max";
+"weather.monday" = "Monday";
+"weather.tuesday" = "Tuesday";
+"weather.wednesday" = "Wednesday";
+"weather.thursday" = "Thursday";
+"weather.friday" = "Friday";
+"weather.saturday" = "Saturday";
+"weather.sunday" = "Sunday";
+"weather.cloudy" = "cloudy";
+"weather.rainy" = "rainy";
+"weather.sunny" = "sunny";
+"locatons.noLocations" = "No Added Locations";

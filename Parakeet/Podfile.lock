@@ -1,0 +1,45 @@
+PODS:
+  - GoogleMaps (5.0.0):
+    - GoogleMaps/Maps (= 5.0.0)
+  - GoogleMaps/Base (5.0.0)
+  - GoogleMaps/Maps (5.0.0):
+    - GoogleMaps/Base
+  - GooglePlaces (5.0.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - R.swift
+  - RxCocoa
+
+SPEC REPOS:
+  trunk:
+    - GoogleMaps
+    - GooglePlaces
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  GoogleMaps: 600e5e69bdf7f4ed7cac4d6aa96c7ec08a5aa254
+  GooglePlaces: 5d87ca13ed98b7a937e0d8bc7026f718c7263271
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+
+PODFILE CHECKSUM: 3283c01a30f213caa1d96aef5f1b4d3e2da4292b
+
+COCOAPODS: 1.10.1

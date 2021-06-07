@@ -3,18 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11CC8C3FE41500180071E15D /* Pods_Parakeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60BEE45200EC24B6AC41062C /* Pods_Parakeet.framework */; };
+		46AE1530F9C93719779D7337 /* Pods_Parakeet_ParakeetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5CA31D779C726B3A3EEA4 /* Pods_Parakeet_ParakeetUITests.framework */; };
+		C91F4FC207F7DF400854718F /* Pods_ParakeetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F99F5F06C76ECD35BC588E /* Pods_ParakeetTests.framework */; };
 		F567BF22266CB1DC00C56C0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF21266CB1DC00C56C0F /* AppDelegate.swift */; };
 		F567BF24266CB1DC00C56C0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF23266CB1DC00C56C0F /* SceneDelegate.swift */; };
-		F567BF26266CB1DC00C56C0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF25266CB1DC00C56C0F /* ViewController.swift */; };
+		F567BF26266CB1DC00C56C0F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF25266CB1DC00C56C0F /* WeatherViewController.swift */; };
 		F567BF29266CB1DC00C56C0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F567BF27266CB1DC00C56C0F /* Main.storyboard */; };
 		F567BF2B266CB1DE00C56C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F567BF2A266CB1DE00C56C0F /* Assets.xcassets */; };
 		F567BF2E266CB1DE00C56C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F567BF2C266CB1DE00C56C0F /* LaunchScreen.storyboard */; };
 		F567BF39266CB1DF00C56C0F /* ParakeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF38266CB1DF00C56C0F /* ParakeetTests.swift */; };
 		F567BF44266CB1DF00C56C0F /* ParakeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF43266CB1DF00C56C0F /* ParakeetUITests.swift */; };
+		F567BF59266CC05700C56C0F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF58266CC05700C56C0F /* NetworkService.swift */; };
+		F567BF5F266CC0B200C56C0F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF5E266CC0B200C56C0F /* Model.swift */; };
+		F567BF6D266D0BDE00C56C0F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF6C266D0BDE00C56C0F /* WeatherViewModel.swift */; };
+		F567BF73266D0C4400C56C0F /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF72266D0C4400C56C0F /* Locator.swift */; };
+		F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BF7A266D0C6400C56C0F /* AppConstants.swift */; };
+		F567BFA7266D2E6C00C56C0F /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFA6266D2E6C00C56C0F /* ServerError.swift */; };
+		F567BFC1266D446000C56C0F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F567BFC0266D446000C56C0F /* Localizable.strings */; };
+		F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */; };
+		F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFCD266D4B2400C56C0F /* Colors.swift */; };
+		F567BFE0266D4F8E00C56C0F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFDF266D4F8E00C56C0F /* R.generated.swift */; };
+		F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */; };
+		F567BFED266D638F00C56C0F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567BFEC266D638F00C56C0F /* Date.swift */; };
+		F567C00B266E0DE300C56C0F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C00A266E0DE200C56C0F /* TabBarViewController.swift */; };
+		F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C013266E128200C56C0F /* LocationsViewController.swift */; };
+		F567C020266E18F800C56C0F /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C01F266E18F800C56C0F /* AddLocationViewController.swift */; };
+		F567C040266E48CF00C56C0F /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */; };
+		F567C045266E4DB000C56C0F /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C044266E4DB000C56C0F /* LocationsModel.swift */; };
+		F567C05A266E7E4C00C56C0F /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C059266E7E4C00C56C0F /* LocationTableViewCell.swift */; };
+		F567C05F266E93FD00C56C0F /* AddedLocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C05E266E93FC00C56C0F /* AddedLocationsViewModel.swift */; };
+		F567C064266E979300C56C0F /* AddedLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C063266E979300C56C0F /* AddedLocationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +58,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12BA6BC58124268EE1F29F92 /* Pods-Parakeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parakeet.release.xcconfig"; path = "Target Support Files/Pods-Parakeet/Pods-Parakeet.release.xcconfig"; sourceTree = "<group>"; };
+		21F99F5F06C76ECD35BC588E /* Pods_ParakeetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParakeetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C914A74D4DBFBC68617EBD /* Pods-ParakeetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParakeetTests.debug.xcconfig"; path = "Target Support Files/Pods-ParakeetTests/Pods-ParakeetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A2DA9E49B288A4E1FEB17BF /* Pods-ParakeetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParakeetTests.release.xcconfig"; path = "Target Support Files/Pods-ParakeetTests/Pods-ParakeetTests.release.xcconfig"; sourceTree = "<group>"; };
+		60BEE45200EC24B6AC41062C /* Pods_Parakeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parakeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD9FB8916998FCC57AE7063 /* Pods-Parakeet-ParakeetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parakeet-ParakeetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89DB3658659EA5B5A3934DB5 /* Pods-Parakeet-ParakeetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parakeet-ParakeetUITests.release.xcconfig"; path = "Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C0E5CA31D779C726B3A3EEA4 /* Pods_Parakeet_ParakeetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parakeet_ParakeetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3F1AF8E5D8FAD94332B657 /* Pods-Parakeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parakeet.debug.xcconfig"; path = "Target Support Files/Pods-Parakeet/Pods-Parakeet.debug.xcconfig"; sourceTree = "<group>"; };
 		F567BF1E266CB1DC00C56C0F /* Parakeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parakeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F567BF21266CB1DC00C56C0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F567BF23266CB1DC00C56C0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F567BF25266CB1DC00C56C0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F567BF25266CB1DC00C56C0F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		F567BF28266CB1DC00C56C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F567BF2A266CB1DE00C56C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F567BF2D266CB1DE00C56C0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +81,26 @@
 		F567BF3F266CB1DF00C56C0F /* ParakeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParakeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F567BF43266CB1DF00C56C0F /* ParakeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParakeetUITests.swift; sourceTree = "<group>"; };
 		F567BF45266CB1DF00C56C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F567BF58266CC05700C56C0F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F567BF5E266CC0B200C56C0F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F567BF6C266D0BDE00C56C0F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		F567BF72266D0C4400C56C0F /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		F567BF7A266D0C6400C56C0F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F567BFA6266D2E6C00C56C0F /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		F567BFC0266D446000C56C0F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardClasses.swift; sourceTree = "<group>"; };
+		F567BFCD266D4B2400C56C0F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F567BFDF266D4F8E00C56C0F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		F567BFEC266D638F00C56C0F /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F567C00A266E0DE200C56C0F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F567C013266E128200C56C0F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		F567C01F266E18F800C56C0F /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
+		F567C044266E4DB000C56C0F /* LocationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsModel.swift; sourceTree = "<group>"; };
+		F567C059266E7E4C00C56C0F /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		F567C05E266E93FC00C56C0F /* AddedLocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedLocationsViewModel.swift; sourceTree = "<group>"; };
+		F567C063266E979300C56C0F /* AddedLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedLocationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CC8C3FE41500180071E15D /* Pods_Parakeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91F4FC207F7DF400854718F /* Pods_ParakeetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +124,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AE1530F9C93719779D7337 /* Pods_Parakeet_ParakeetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82D355B3008A37E2912C3C54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60BEE45200EC24B6AC41062C /* Pods_Parakeet.framework */,
+				C0E5CA31D779C726B3A3EEA4 /* Pods_Parakeet_ParakeetUITests.framework */,
+				21F99F5F06C76ECD35BC588E /* Pods_ParakeetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8346C535DE0036AD7E291ED3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF3F1AF8E5D8FAD94332B657 /* Pods-Parakeet.debug.xcconfig */,
+				12BA6BC58124268EE1F29F92 /* Pods-Parakeet.release.xcconfig */,
+				6FD9FB8916998FCC57AE7063 /* Pods-Parakeet-ParakeetUITests.debug.xcconfig */,
+				89DB3658659EA5B5A3934DB5 /* Pods-Parakeet-ParakeetUITests.release.xcconfig */,
+				39C914A74D4DBFBC68617EBD /* Pods-ParakeetTests.debug.xcconfig */,
+				4A2DA9E49B288A4E1FEB17BF /* Pods-ParakeetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F567BF15266CB1DC00C56C0F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +161,8 @@
 				F567BF37266CB1DF00C56C0F /* ParakeetTests */,
 				F567BF42266CB1DF00C56C0F /* ParakeetUITests */,
 				F567BF1F266CB1DC00C56C0F /* Products */,
+				8346C535DE0036AD7E291ED3 /* Pods */,
+				82D355B3008A37E2912C3C54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +179,18 @@
 		F567BF20266CB1DC00C56C0F /* Parakeet */ = {
 			isa = PBXGroup;
 			children = (
+				F567C01E266E162A00C56C0F /* AddNewLocation */,
+				F567C012266E126A00C56C0F /* AddedLocations */,
+				F567C009266E0DB700C56C0F /* TabBarController */,
+				F567BFDF266D4F8E00C56C0F /* R.generated.swift */,
+				F567BFBF266D442900C56C0F /* Localization */,
+				F567BF8E266D0EFA00C56C0F /* Weather */,
+				F567BF8A266D0D4E00C56C0F /* Common */,
+				F567BF71266D0C3400C56C0F /* Locator */,
+				F567BF5D266CC09400C56C0F /* Model */,
+				F567BF54266CC03C00C56C0F /* Network */,
 				F567BF21266CB1DC00C56C0F /* AppDelegate.swift */,
 				F567BF23266CB1DC00C56C0F /* SceneDelegate.swift */,
-				F567BF25266CB1DC00C56C0F /* ViewController.swift */,
 				F567BF27266CB1DC00C56C0F /* Main.storyboard */,
 				F567BF2A266CB1DE00C56C0F /* Assets.xcassets */,
 				F567BF2C266CB1DE00C56C0F /* LaunchScreen.storyboard */,
@@ -128,6 +217,89 @@
 			path = ParakeetUITests;
 			sourceTree = "<group>";
 		};
+		F567BF54266CC03C00C56C0F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F567BF58266CC05700C56C0F /* NetworkService.swift */,
+				F567BFA6266D2E6C00C56C0F /* ServerError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F567BF5D266CC09400C56C0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F567BF5E266CC0B200C56C0F /* Model.swift */,
+				F567C044266E4DB000C56C0F /* LocationsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F567BF71266D0C3400C56C0F /* Locator */ = {
+			isa = PBXGroup;
+			children = (
+				F567BF72266D0C4400C56C0F /* Locator.swift */,
+			);
+			path = Locator;
+			sourceTree = "<group>";
+		};
+		F567BF8A266D0D4E00C56C0F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F567BF7A266D0C6400C56C0F /* AppConstants.swift */,
+				F567BFC8266D45ED00C56C0F /* StoryboardClasses.swift */,
+				F567BFCD266D4B2400C56C0F /* Colors.swift */,
+				F567BFEC266D638F00C56C0F /* Date.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F567BF8E266D0EFA00C56C0F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F567BF25266CB1DC00C56C0F /* WeatherViewController.swift */,
+				F567BF6C266D0BDE00C56C0F /* WeatherViewModel.swift */,
+				F567BFE4266D50E300C56C0F /* WeatherTableViewCell.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F567BFBF266D442900C56C0F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F567BFC0266D446000C56C0F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		F567C009266E0DB700C56C0F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F567C00A266E0DE200C56C0F /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F567C012266E126A00C56C0F /* AddedLocations */ = {
+			isa = PBXGroup;
+			children = (
+				F567C013266E128200C56C0F /* LocationsViewController.swift */,
+				F567C05E266E93FC00C56C0F /* AddedLocationsViewModel.swift */,
+				F567C063266E979300C56C0F /* AddedLocationTableViewCell.swift */,
+			);
+			path = AddedLocations;
+			sourceTree = "<group>";
+		};
+		F567C01E266E162A00C56C0F /* AddNewLocation */ = {
+			isa = PBXGroup;
+			children = (
+				F567C01F266E18F800C56C0F /* AddLocationViewController.swift */,
+				F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */,
+				F567C059266E7E4C00C56C0F /* LocationTableViewCell.swift */,
+			);
+			path = AddNewLocation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +307,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F567BF48266CB1DF00C56C0F /* Build configuration list for PBXNativeTarget "Parakeet" */;
 			buildPhases = (
+				518D158EFCC312CE7D7D8A25 /* [CP] Check Pods Manifest.lock */,
+				F567BFB8266D43A800C56C0F /* ShellScript */,
 				F567BF1A266CB1DC00C56C0F /* Sources */,
 				F567BF1B266CB1DC00C56C0F /* Frameworks */,
 				F567BF1C266CB1DC00C56C0F /* Resources */,
+				38B7AF76A1E6B04DBC918634 /* [CP] Copy Pods Resources */,
+				950AF2EE9B1C4812BD1B6800 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +328,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F567BF4B266CB1DF00C56C0F /* Build configuration list for PBXNativeTarget "ParakeetTests" */;
 			buildPhases = (
+				26144D3DE6C33A8905B95D1B /* [CP] Check Pods Manifest.lock */,
 				F567BF30266CB1DF00C56C0F /* Sources */,
 				F567BF31266CB1DF00C56C0F /* Frameworks */,
 				F567BF32266CB1DF00C56C0F /* Resources */,
@@ -170,9 +347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F567BF4E266CB1DF00C56C0F /* Build configuration list for PBXNativeTarget "ParakeetUITests" */;
 			buildPhases = (
+				196137209EE998D825F83601 /* [CP] Check Pods Manifest.lock */,
 				F567BF3B266CB1DF00C56C0F /* Sources */,
 				F567BF3C266CB1DF00C56C0F /* Frameworks */,
 				F567BF3D266CB1DF00C56C0F /* Resources */,
+				3A4D45098C90AB95DAF97A58 /* [CP] Copy Pods Resources */,
+				793AD75997AC6F6DF3E10256 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F567BF2E266CB1DE00C56C0F /* LaunchScreen.storyboard in Resources */,
+				F567BFC1266D446000C56C0F /* Localizable.strings in Resources */,
 				F567BF2B266CB1DE00C56C0F /* Assets.xcassets in Resources */,
 				F567BF29266CB1DC00C56C0F /* Main.storyboard in Resources */,
 			);
@@ -253,14 +434,189 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		196137209EE998D825F83601 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parakeet-ParakeetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26144D3DE6C33A8905B95D1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParakeetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38B7AF76A1E6B04DBC918634 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A4D45098C90AB95DAF97A58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		518D158EFCC312CE7D7D8A25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parakeet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		793AD75997AC6F6DF3E10256 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parakeet-ParakeetUITests/Pods-Parakeet-ParakeetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		950AF2EE9B1C4812BD1B6800 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Parakeet/Pods-Parakeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F567BFB8266D43A800C56C0F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F567BF1A266CB1DC00C56C0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F567BF26266CB1DC00C56C0F /* ViewController.swift in Sources */,
+				F567C064266E979300C56C0F /* AddedLocationTableViewCell.swift in Sources */,
+				F567BF73266D0C4400C56C0F /* Locator.swift in Sources */,
+				F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */,
+				F567BF5F266CC0B200C56C0F /* Model.swift in Sources */,
+				F567C040266E48CF00C56C0F /* AddLocationViewModel.swift in Sources */,
+				F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */,
+				F567BF6D266D0BDE00C56C0F /* WeatherViewModel.swift in Sources */,
+				F567C05A266E7E4C00C56C0F /* LocationTableViewCell.swift in Sources */,
+				F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */,
+				F567BF26266CB1DC00C56C0F /* WeatherViewController.swift in Sources */,
+				F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */,
+				F567C045266E4DB000C56C0F /* LocationsModel.swift in Sources */,
 				F567BF22266CB1DC00C56C0F /* AppDelegate.swift in Sources */,
+				F567BF59266CC05700C56C0F /* NetworkService.swift in Sources */,
+				F567BFED266D638F00C56C0F /* Date.swift in Sources */,
 				F567BF24266CB1DC00C56C0F /* SceneDelegate.swift in Sources */,
+				F567C05F266E93FD00C56C0F /* AddedLocationsViewModel.swift in Sources */,
+				F567BFA7266D2E6C00C56C0F /* ServerError.swift in Sources */,
+				F567BFE5266D50E300C56C0F /* WeatherTableViewCell.swift in Sources */,
+				F567C020266E18F800C56C0F /* AddLocationViewController.swift in Sources */,
+				F567C00B266E0DE300C56C0F /* TabBarViewController.swift in Sources */,
+				F567BFE0266D4F8E00C56C0F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +789,7 @@
 		};
 		F567BF49266CB1DF00C56C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF3F1AF8E5D8FAD94332B657 /* Pods-Parakeet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +809,7 @@
 		};
 		F567BF4A266CB1DF00C56C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12BA6BC58124268EE1F29F92 /* Pods-Parakeet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +829,7 @@
 		};
 		F567BF4C266CB1DF00C56C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39C914A74D4DBFBC68617EBD /* Pods-ParakeetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +852,7 @@
 		};
 		F567BF4D266CB1DF00C56C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2DA9E49B288A4E1FEB17BF /* Pods-ParakeetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +875,7 @@
 		};
 		F567BF4F266CB1DF00C56C0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD9FB8916998FCC57AE7063 /* Pods-Parakeet-ParakeetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +896,7 @@
 		};
 		F567BF50266CB1DF00C56C0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DB3658659EA5B5A3934DB5 /* Pods-Parakeet-ParakeetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
