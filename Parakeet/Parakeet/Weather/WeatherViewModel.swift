@@ -12,10 +12,10 @@ import RxCocoa
 
 class WeatherViewModel{
     lazy var locator = Locator()
+    let daysOfWeek = BehaviorRelay(value: [String]())
     
-    func getWeekdays(){
-        Date().getNextDays()
-        
+    func getWeekdays() {
+        self.daysOfWeek.accept(Date().getDays())
     }
     
     func getWeather() -> Single<Result>{

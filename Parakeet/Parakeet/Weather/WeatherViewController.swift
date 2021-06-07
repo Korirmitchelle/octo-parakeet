@@ -110,6 +110,11 @@ extension WeatherViewController:UITableViewDataSource{
         if let temperature = results?.daily[indexPath.row + 1].temp.day{
             cell.temperatureLabel.text = String(temperature)
         }
+        let isIndexValid = viewModel.daysOfWeek.value.indices.contains(indexPath.row)
+        if isIndexValid{
+            cell.dayLabel.text = viewModel.daysOfWeek.value[indexPath.row]
+        }
+
         return cell
     }
 }

@@ -8,16 +8,18 @@
 import Foundation
 
 extension Date {
-   
-    func getNextDays(){
-        let dateInWeek = Date()//7th June 2017
-        let calendar = Calendar.current
-        let dayOfWeek = calendar.component(.weekday, from: dateInWeek)
-        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: dateInWeek)!
-        let days = (weekdays.lowerBound ..< weekdays.upperBound)
-            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: dateInWeek) }
-
-        print(days)
+    
+    func getDays() -> [String]{
+        var weekDays = [String]()
+        let cal = Calendar.current
+        var date = cal.startOfDay(for: Date())
+        for _ in 1 ... 8 {
+            date = cal.date(byAdding: .day, value: 1, to: date)!
+            let formatter = DateFormatter()
+            formatter.dateFormat = "eeee"
+            weekDays.append(formatter.string(from: date))
+        }
+        return weekDays
     }
     
 }
