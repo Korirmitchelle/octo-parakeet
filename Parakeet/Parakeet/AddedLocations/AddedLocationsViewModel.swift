@@ -19,6 +19,9 @@ class AddedLocationsViewModel{
                 self?.locations.accept(array)
                 completable(.completed)
             }
+            else{
+                completable(.error(ServerError(description: "")))
+            }
             return Disposables.create()
         }
     }

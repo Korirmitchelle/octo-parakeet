@@ -18,16 +18,16 @@
         <scene sceneID="QJD-Tm-dKr">
             <objects>
                 <tabBarController id="rBC-MX-1kB" customClass="TabBarViewController" customModule="Parakeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ah0-QT-umk">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ah0-QT-umk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="cloudy"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="cloudy"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <outlet property="customTabBar" destination="Ah0-QT-umk" id="o9K-1c-BNb"/>
+                        <outlet property="customTabbar" destination="Ah0-QT-umk" id="eRt-ik-abJ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="5ci-c7-05y"/>
                         <segue destination="LyE-VQ-H3F" kind="relationship" relationship="viewControllers" id="2WU-kb-xlU"/>
                     </connections>
@@ -41,14 +41,14 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherViewController" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Parakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="If0-t5-cj9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-sW-JBw">
-                                <rect key="frame" x="0.0" y="401" width="414" height="412"/>
+                                <rect key="frame" x="0.0" y="364" width="414" height="449"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5lu-Q1-3AZ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -130,7 +130,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-gw-jpR">
-                                        <rect key="frame" x="20" y="86" width="374" height="326"/>
+                                        <rect key="frame" x="20" y="86" width="374" height="363"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="daycell" id="LbL-mq-JmE" customClass="WeatherTableViewCell" customModule="Parakeet" customModuleProvider="target">
@@ -199,16 +199,16 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UVy-hH-cLt">
-                                <rect key="frame" x="152" y="151.5" width="110" height="100"/>
+                                <rect key="frame" x="152" y="133" width="110" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09V-8h-aM8">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="41.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqR-Ad-kfS">
-                                        <rect key="frame" x="0.0" y="52" width="110" height="21"/>
+                                        <rect key="frame" x="0.0" y="51.5" width="110" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -257,9 +257,7 @@
                             <constraint firstItem="UVy-hH-cLt" firstAttribute="centerY" secondItem="If0-t5-cj9" secondAttribute="centerY" id="lF7-ZM-MeM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="yCc-a7-UQm">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="yCc-a7-UQm"/>
                     <connections>
                         <outlet property="activityIndicator" destination="q0A-B7-JuD" id="cMo-Xj-VUt"/>
                         <outlet property="currentLabel" destination="8xb-hf-ciD" id="Eqd-o5-Tyb"/>
@@ -283,9 +281,30 @@
             <objects>
                 <viewController storyboardIdentifier="LocationsViewController" id="LyE-VQ-H3F" customClass="LocationsViewController" customModule="Parakeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXQ-0F-KBj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-CP-r6l">
+                                <rect key="frame" x="234" y="98" width="170" height="30"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="08e-lE-pau">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="NKl-KN-E4Q"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show on map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atD-nl-MwT">
+                                        <rect key="frame" x="59" y="0.0" width="111" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="1J6-7g-SRZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="69p-U6-d4j"/>
+                                </constraints>
+                            </stackView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrb-X1-73b">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" name="cloudy"/>
@@ -303,7 +322,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he5-Ve-iad">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he5-Ve-iad">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oaB-Tu-qmE">
@@ -342,8 +361,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="cloudy"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpK-i5-ZN6" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-Nb-TCs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addedcell" rowHeight="50" id="98d-KX-gVv" customClass="AddedLocationTableViewCell" customModule="Parakeet" customModuleProvider="target">
@@ -381,15 +404,21 @@
                             <constraint firstItem="8Q1-RI-jyS" firstAttribute="trailing" secondItem="Lvg-Nb-TCs" secondAttribute="trailing" id="26c-J0-Mng"/>
                             <constraint firstItem="lrb-X1-73b" firstAttribute="trailing" secondItem="8Q1-RI-jyS" secondAttribute="trailing" id="2KK-N9-dAg"/>
                             <constraint firstItem="qB7-mC-ft4" firstAttribute="top" secondItem="GXQ-0F-KBj" secondAttribute="top" id="3PY-YW-1IE"/>
-                            <constraint firstItem="Lvg-Nb-TCs" firstAttribute="top" secondItem="lrb-X1-73b" secondAttribute="bottom" id="CK5-LQ-dSZ"/>
+                            <constraint firstItem="8Q1-RI-jyS" firstAttribute="trailing" secondItem="EpK-i5-ZN6" secondAttribute="trailing" id="4to-16-MCV"/>
+                            <constraint firstItem="8Q1-RI-jyS" firstAttribute="bottom" secondItem="EpK-i5-ZN6" secondAttribute="bottom" id="B40-b1-zMA"/>
                             <constraint firstItem="8Q1-RI-jyS" firstAttribute="trailing" secondItem="he5-Ve-iad" secondAttribute="trailing" id="EQe-Nv-rb9"/>
+                            <constraint firstItem="EpK-i5-ZN6" firstAttribute="top" secondItem="HUP-CP-r6l" secondAttribute="bottom" constant="20" id="KMR-wQ-W4q"/>
+                            <constraint firstItem="HUP-CP-r6l" firstAttribute="top" secondItem="lrb-X1-73b" secondAttribute="bottom" constant="10" id="MQB-Bi-6uT"/>
                             <constraint firstItem="qB7-mC-ft4" firstAttribute="leading" secondItem="8Q1-RI-jyS" secondAttribute="leading" id="MWo-xa-YZt"/>
                             <constraint firstItem="he5-Ve-iad" firstAttribute="top" secondItem="lrb-X1-73b" secondAttribute="bottom" id="RHe-Cm-Iqf"/>
+                            <constraint firstItem="Lvg-Nb-TCs" firstAttribute="top" secondItem="HUP-CP-r6l" secondAttribute="bottom" constant="10" id="bLb-wy-ENy"/>
                             <constraint firstItem="lrb-X1-73b" firstAttribute="top" secondItem="8Q1-RI-jyS" secondAttribute="top" id="ecj-Od-StX"/>
                             <constraint firstItem="lrb-X1-73b" firstAttribute="leading" secondItem="8Q1-RI-jyS" secondAttribute="leading" id="fs2-k1-v54"/>
                             <constraint firstItem="8Q1-RI-jyS" firstAttribute="bottom" secondItem="he5-Ve-iad" secondAttribute="bottom" id="grJ-uz-LAO"/>
+                            <constraint firstItem="8Q1-RI-jyS" firstAttribute="trailing" secondItem="HUP-CP-r6l" secondAttribute="trailing" constant="10" id="jZE-ZJ-c3R"/>
                             <constraint firstItem="he5-Ve-iad" firstAttribute="leading" secondItem="8Q1-RI-jyS" secondAttribute="leading" id="nGb-8b-Vg9"/>
                             <constraint firstItem="8Q1-RI-jyS" firstAttribute="trailing" secondItem="qB7-mC-ft4" secondAttribute="trailing" id="obu-6x-ux2"/>
+                            <constraint firstItem="EpK-i5-ZN6" firstAttribute="leading" secondItem="8Q1-RI-jyS" secondAttribute="leading" id="rmP-he-jeD"/>
                             <constraint firstItem="lrb-X1-73b" firstAttribute="top" secondItem="qB7-mC-ft4" secondAttribute="bottom" id="tm5-Hq-4kb"/>
                             <constraint firstItem="8Q1-RI-jyS" firstAttribute="bottom" secondItem="Lvg-Nb-TCs" secondAttribute="bottom" id="w4F-SD-BAZ"/>
                         </constraints>
@@ -399,11 +428,14 @@
                     <connections>
                         <outlet property="emptyView" destination="he5-Ve-iad" id="SeW-gm-U9f"/>
                         <outlet property="locationsTableview" destination="Lvg-Nb-TCs" id="0P9-Gg-hQ7"/>
+                        <outlet property="mapview" destination="EpK-i5-ZN6" id="GLm-8Z-czv"/>
+                        <outlet property="switchStackview" destination="HUP-CP-r6l" id="xMS-Nq-Fgs"/>
+                        <outlet property="toggleSwitch" destination="08e-lE-pau" id="vnd-fe-skx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPp-Sa-8dE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="-696"/>
+            <point key="canvasLocation" x="292.75362318840581" y="-750"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="4C9-Ji-62h">
@@ -520,7 +552,7 @@
                                             <constraint firstAttribute="width" constant="30" id="xNq-Qm-Ps8"/>
                                         </constraints>
                                     </imageView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-rJ-C9h">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-rJ-C9h">
                                         <rect key="frame" x="374" y="10" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Phv-7b-q8N"/>

@@ -51,6 +51,12 @@ class AddLocationViewController: UIViewController {
         locationTextfield.text = location.name
         self.location = location
         hideTableview()
+        guard let weatherController = R.storyboard.main.weatherViewController() else {
+            return
+        }
+        weatherController.location = location
+        weatherController.city = location.name
+        self.present(weatherController, animated: true, completion: nil)
        
     }
     

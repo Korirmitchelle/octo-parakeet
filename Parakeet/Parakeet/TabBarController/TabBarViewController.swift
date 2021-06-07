@@ -8,11 +8,12 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
-    @IBOutlet weak var customTabBar: UITabBar!
+    @IBOutlet weak var customTabbar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        customTabbar.barTintColor = .white
+        customTabbar.tintColor = .black
 
     }
     
