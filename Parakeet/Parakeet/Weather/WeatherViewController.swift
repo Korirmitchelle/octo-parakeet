@@ -29,6 +29,8 @@ class WeatherViewController: UIViewController {
         showLoadingView()
         getWeather()
         setupTableview()
+        viewModel.getWeekdays()
+        
     }
     
     func setupTableview(){
@@ -66,6 +68,7 @@ class WeatherViewController: UIViewController {
     
     
     func showViews(result:Result){
+        
         hideLoadingView()
         self.results = result
         weatherTableView.reloadData()

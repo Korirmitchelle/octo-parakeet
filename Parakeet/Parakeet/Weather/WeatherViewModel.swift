@@ -13,6 +13,11 @@ import RxCocoa
 class WeatherViewModel{
     lazy var locator = Locator()
     
+    func getWeekdays(){
+        Date().getNextDays()
+        
+    }
+    
     func getWeather() -> Single<Result>{
         self.locator.findMe()
         return Single.create { single -> Disposable in
