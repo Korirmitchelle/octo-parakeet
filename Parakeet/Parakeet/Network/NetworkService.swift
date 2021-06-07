@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+import GooglePlaces
+import RxSwift
 
 class NetworkService {
     static let shared = NetworkService()
@@ -69,5 +70,106 @@ class NetworkService {
         }
         task.resume()
     }
+    
+    func getPlaces(searchString: String) -> Single<Locations> {
+        let params = [
+            "input": searchString,
+            "types": "",
+            "key": AppConstants.googleMapsKey,
+            "location": "\(AppConstants.location.latitude),\(AppConstants.location.longitude)",
+            "radius": 100.description
+        ]
+        return doRequest(
+            url: "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+            params: params
+        )
+    }
+    
+    func doRequest(url: String, params: [String: String] ) -> Single<Locations> {
+        return Single.create { completable -> Disposable in
+            let request = NSMutableURLRequest(
+                url: NSURL(string: "\(url)?\(self.query(parameters: params as [String: AnyObject]))")! as URL
+            )
+            let session = URLSession.shared
+            let task = session.dataTask(with: request as URLRequest) { data, response, error in
+                guard error == nil , let data = data else {
+                    completable(.failure(ServerError(description: error?.localizedDescription ?? "")))
+                    return
+                }
+                do {
+                    let items = try JSONDecoder().decode(Locations.self, from: data)
+                    completable(.success(items))
+                    
+                } catch {
+                    print("error here \(error)")
+                    completable(.failure(ServerError(description: error.localizedDescription)))
+                }
+                
+            }
+            task.resume()
+            return Disposables.create()
+        }
+    }
+    
+    
+    func query(parameters: [String: AnyObject]) -> String {
+        var components: [(String, String)] = []
+        for key in Array(parameters.keys).sorted(by: <) {
+            let value: AnyObject = parameters[key]!
+            components += [(escape(string: key), escape(string: "\(value)"))]
+        }
+        
+        return (components.map { "\($0)=\($1)" } as [String]).joined(separator: "&")
+    }
+    
+    func escape(string: String) -> String {
+        let legalURLCharactersToBeEscaped: NSCharacterSet = NSCharacterSet(charactersIn: ":/?&=;+!@#$()',*") as NSCharacterSet
+        return NSString(string: string).addingPercentEncoding(withAllowedCharacters: legalURLCharactersToBeEscaped as CharacterSet)! as String
+    }
+    
+    
+    func getCoordinates(predictions:[Prediction] )-> [Location] {
+        var locations = [Location]()
+        for prediction in predictions {
+            GMSPlacesClient.shared().lookUpPlaceID(prediction.placeID) { results, error in
+                guard error == nil, let results = results else {
+                    return
+                }
+                let location = Location(name: prediction.structuredFormatting.mainText, detail: prediction.structuredFormatting.secondaryText, id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
+                locations.append(location)
+            }
+        }
+//        return Single.create { single in
+//            var locations = [Location]()
+//            for prediction in predictions {
+//                GMSPlacesClient.shared().lookUpPlaceID(prediction.placeID) { results, error in
+//                    guard error == nil, let results = results else {
+//                        single(.failure(error ?? ServerError(description: "Invalid response")))
+//                        return
+//                    }
+//                    let location = Location(name: prediction.structuredFormatting.mainText, detail: prediction.structuredFormatting.secondaryText, id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
+//                    locations.append(location)
+//                    single(.success(locations))
+//                }
+//            }
+//            return Disposables.create()
+//        }
+        return locations
+    }
+    
+    
+    func getCoordinates1(prediction:Prediction)-> Single<Location> {
+        return Single.create { single in
+            GMSPlacesClient.shared().lookUpPlaceID(prediction.placeID) { results, error in
+                guard error == nil, let results = results else {
+                    single(.failure(error ?? ServerError(description: "Invalid response")))
+                    return
+                }
+                let location = Location(name: prediction.structuredFormatting.mainText, detail: prediction.structuredFormatting.secondaryText, id: prediction.placeID, lat: results.coordinate.latitude, lon: results.coordinate.longitude)
+                single(.success(location))
+                
+            }
+            return Disposables.create()
+        }
+    }
 }
-

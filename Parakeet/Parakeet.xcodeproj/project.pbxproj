@@ -33,6 +33,8 @@
 		F567C00B266E0DE300C56C0F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C00A266E0DE200C56C0F /* TabBarViewController.swift */; };
 		F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C013266E128200C56C0F /* LocationsViewController.swift */; };
 		F567C020266E18F800C56C0F /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C01F266E18F800C56C0F /* AddLocationViewController.swift */; };
+		F567C040266E48CF00C56C0F /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */; };
+		F567C045266E4DB000C56C0F /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F567C044266E4DB000C56C0F /* LocationsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F567C00A266E0DE200C56C0F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		F567C013266E128200C56C0F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		F567C01F266E18F800C56C0F /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
+		F567C044266E4DB000C56C0F /* LocationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				F567BF5E266CC0B200C56C0F /* Model.swift */,
+				F567C044266E4DB000C56C0F /* LocationsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				F567C01F266E18F800C56C0F /* AddLocationViewController.swift */,
+				F567C03F266E48CF00C56C0F /* AddLocationViewModel.swift */,
 			);
 			path = AddNewLocation;
 			sourceTree = "<group>";
@@ -583,11 +589,13 @@
 				F567BF73266D0C4400C56C0F /* Locator.swift in Sources */,
 				F567BFCE266D4B2400C56C0F /* Colors.swift in Sources */,
 				F567BF5F266CC0B200C56C0F /* Model.swift in Sources */,
+				F567C040266E48CF00C56C0F /* AddLocationViewModel.swift in Sources */,
 				F567C014266E128200C56C0F /* LocationsViewController.swift in Sources */,
 				F567BF6D266D0BDE00C56C0F /* WeatherViewModel.swift in Sources */,
 				F567BF7B266D0C6400C56C0F /* AppConstants.swift in Sources */,
 				F567BF26266CB1DC00C56C0F /* WeatherViewController.swift in Sources */,
 				F567BFC9266D45ED00C56C0F /* StoryboardClasses.swift in Sources */,
+				F567C045266E4DB000C56C0F /* LocationsModel.swift in Sources */,
 				F567BF22266CB1DC00C56C0F /* AppDelegate.swift in Sources */,
 				F567BF59266CC05700C56C0F /* NetworkService.swift in Sources */,
 				F567BFED266D638F00C56C0F /* Date.swift in Sources */,

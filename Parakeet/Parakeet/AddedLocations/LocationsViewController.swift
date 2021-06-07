@@ -7,13 +7,20 @@
 
 import UIKit
 
-class LocationsViewController: UITabBarController {
+class LocationsViewController: UIViewController {
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var locationsTableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationsTableview.isHidden = true
 
+    }
+    @IBAction func addLocation(_ sender: Any) {
+        guard let addController = R.storyboard.main.addLocationViewController() else {
+            return
+        }
+        self.present(addController, animated: true, completion: nil)
     }
     
 

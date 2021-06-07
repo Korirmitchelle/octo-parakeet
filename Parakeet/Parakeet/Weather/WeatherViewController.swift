@@ -67,7 +67,6 @@ class WeatherViewController: UIViewController {
     
     
     func showViews(result:Result){
-        
         hideLoadingView()
         self.results = result
         weatherTableView.reloadData()
